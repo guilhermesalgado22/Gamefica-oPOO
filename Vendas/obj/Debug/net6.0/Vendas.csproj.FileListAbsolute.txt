@@ -1,0 +1,15 @@
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\bin\Debug\net6.0\Vendas.exe
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\bin\Debug\net6.0\Vendas.deps.json
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\bin\Debug\net6.0\Vendas.runtimeconfig.json
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\bin\Debug\net6.0\Vendas.dll
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\bin\Debug\net6.0\Vendas.pdb
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\obj\Debug\net6.0\Vendas.csproj.AssemblyReference.cache
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\obj\Debug\net6.0\Vendas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\obj\Debug\net6.0\Vendas.AssemblyInfoInputs.cache
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\obj\Debug\net6.0\Vendas.AssemblyInfo.cs
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\obj\Debug\net6.0\Vendas.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\obj\Debug\net6.0\Vendas.dll
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\obj\Debug\net6.0\refint\Vendas.dll
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\obj\Debug\net6.0\Vendas.pdb
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\obj\Debug\net6.0\Vendas.genruntimeconfig.cache
+C:\Users\Guilherme Salgado\Desktop\Game1\Vendas\Vendas\obj\Debug\net6.0\ref\Vendas.dll
