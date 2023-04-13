@@ -13,26 +13,26 @@ public class ProdutoService : IProdutoService
 
         _produtos = new List<Produto>
     {
-        new Produto { 
-            Id = 1, 
-            Nome = "Calça  Jeans ",
-            Descricao = "Boca de sino Feminina", 
-            Preco = 100m, Categoria= new Categoria 
-            { Id = 1, Nome = "Calça Feminina", Descricao = "Categoria de calças femininas" }, 
-            Quantidade = 10 },
-        new Produto { 
-            Id = 2, 
-            Nome = "Camiseta Batman", 
-            Descricao = "Infantil", 
-            Preco = 150m, Categoria = new Categoria 
-            { Id = 1, Nome = "Infantil", Descricao = "Categoria Infantil" },
-            Quantidade = 5 },
-        new Produto 
-        { Id = 3, Nome = "Chinelo",
-            Descricao = "Havaianas", 
-            Preco = 200m, Categoria = new Categoria 
-            { Id = 2, Nome = "Chinelo", Descricao = "Categoria de Chinelos Unisex" }, 
-            Quantidade = 8 }
+        //new Produto { 
+        //    Id = 1, 
+        //    Nome = "Calça  Jeans ",
+        //    Descricao = "Boca de sino Feminina", 
+        //    Preco = 100m, Categoria= new Categoria 
+        //    { Id = 1, Nome = "Calça Feminina", Descricao = "Categoria de calças femininas" }, 
+        //    Quantidade = 10 },
+        //new Produto { 
+        //    Id = 2, 
+        //    Nome = "Camiseta Batman", 
+        //    Descricao = "Infantil", 
+        //    Preco = 150m, Categoria = new Categoria 
+        //    { Id = 1, Nome = "Infantil", Descricao = "Categoria Infantil" },
+        //    Quantidade = 5 },
+        //new Produto 
+        //{ Id = 3, Nome = "Chinelo",
+        //    Descricao = "Havaianas", 
+        //    Preco = 200m, Categoria = new Categoria 
+        //    { Id = 2, Nome = "Chinelo", Descricao = "Categoria de Chinelos Unisex" }, 
+        //    Quantidade = 8 }
     };
     }
 
@@ -40,7 +40,7 @@ public class ProdutoService : IProdutoService
     {
         Produto novoProduto = new Produto
         {
-            Id = _produtos.Count + 1,
+            Id = _produtos.Count,
             Nome = nome,
             Descricao = descricao,
             Preco = preco,

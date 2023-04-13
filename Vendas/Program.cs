@@ -43,9 +43,11 @@ class Program
                     Console.WriteLine("---------------------");
 
                     List<Produto> produtos = produtoService.ObterProdutos();
+                  List<Categoria> categorias =categoriaService.ObterCategorias();  
                     foreach (Produto produto in produtos)
+                        foreach(Categoria categoria in categorias)
                     {
-                        Console.WriteLine($"ID: {produto.Id}\n | Nome: {produto.Nome}\n | Preço: {produto.Preco}\n | Categoria: {produto.Categoria.Nome} \n| Quantidad: {produto.Quantidade}\n");
+                        Console.WriteLine($"ID: {produto.Id}\n | Nome: {produto.Nome}\n | Preço: {produto.Preco}\n | Categoria: {categoria.Nome} \n| Quantidad: {produto.Quantidade}\n");
                     }
                     break;
                 case 2:
