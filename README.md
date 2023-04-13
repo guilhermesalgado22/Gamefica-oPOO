@@ -1,5 +1,5 @@
 # Gamefica-oPOO
-Atividade 01- Vendas
+Atividade 01- Vendas --- GUILHERME AUGUSTO FERREIRA SALGADO, JEFFERSON ALVES FELIX, GABRIEL AURELIO NUNES
 
 O sistema funciona de maneira simples, basta selecionar uma opção, e informar o que está sendo solicitado.
 
