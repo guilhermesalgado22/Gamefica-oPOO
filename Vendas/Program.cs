@@ -115,36 +115,51 @@ class Program
                         Console.WriteLine($"ID: {cliente.Id} | Nome: {cliente.Nome} {cliente.Sobrenome} | Endereço: {cliente.Endereco} | Telefone: {cliente.Telefone}");
                     }
                     break;
-                case 4:
+                    case 4:
                     Console.WriteLine("Criar produto");
                     Console.WriteLine("Digite o nome do produto:");
-                    string nome = Console.ReadLine();
+                    string nomess = Console.ReadLine();
 
                     Console.WriteLine("Digite a descrição do produto:");
-                    string descricao = Console.ReadLine();
+                    string descricaoss = Console.ReadLine();
 
                     Console.WriteLine("Digite o preço do produto:");
-                    decimal preco = decimal.Parse(Console.ReadLine());
+                    decimal precoss = decimal.Parse(Console.ReadLine());
 
                     Console.WriteLine("Digite a quantidade do produto:");
-                    int quantidades = int.Parse(Console.ReadLine());
+                    int quantidadesss = int.Parse(Console.ReadLine());
 
                     Console.WriteLine("Escolha a categoria do produto:");
 
-                    List<Categoria> categorias = categoriaService.ObterCategorias();
+                    List<Categoria> categoriassss = categoriaService.ObterCategorias();
 
-                    foreach (Categoria categoria in categorias)
+                    foreach (Categoria categoria in categoriassss)
                     {
                         Console.WriteLine($"{categoria.Id} - {categoria.Nome}");
                     }
 
-                    int idCategoria = int.Parse(Console.ReadLine());
+                    int idCategoriass = int.Parse(Console.ReadLine());
 
-                    Categoria categoriaSelecionada = categoriaService.ObterCategoriaPorId(idCategoria);
+                    Categoria categoriaSelecionadass = categoriaService.ObterCategoriaPorId(idCategoriass);
 
-                    Produto novoProduto = produtoService.CriarProduto(nome, descricao, preco, quantidades, categoriaSelecionada);
+                    if (categoriaSelecionadass == null)
+                    {
+                        Console.WriteLine($"Categoria com ID {idCategoriass} não encontrada. Criando nova categoria...");
+                        Console.WriteLine("Digite o nome da nova categoria:");
+                        string nomeCategoriass = Console.ReadLine();
 
-                    Console.WriteLine($"Produto '{novoProduto.Nome}' criado com sucesso!");
+                        Console.WriteLine("Digite a descrição da nova categoria:");
+                        string descricaoCategoriass = Console.ReadLine();
+
+                        Categoria categoriaSelecionada = categoriaService.CriarCategoria(idCategoriass, nomeCategoriass, descricaoCategoriass);
+                    }
+
+                    Console.WriteLine("Digite a quantidade do produto:");
+                    int quantidadessss = int.Parse(Console.ReadLine());
+
+                    Produto novoProdutoss = produtoService.CriarProduto(nomess, descricaoss, precoss, quantidadessss, categoriaSelecionadass);
+
+                    Console.WriteLine($"Produto '{novoProdutoss.Nome}' criado com sucesso!");
                     break;
                 case 5:
                     Console.WriteLine("Editar produto");
@@ -214,6 +229,82 @@ class Program
                     Console.WriteLine("Opção inválida.");
                     break;
 
+                case 7:
+                    Console.WriteLine("Categorias disponíveis:");
+                    Console.WriteLine("----------------------");
+
+                    List<Categoria> categoriasss = categoriaService.ObterCategorias();
+                    foreach (Categoria categoria in categoriasss)
+                    {
+                        Console.WriteLine($"ID: {categoria.Id} | Nome: {categoria.Nome} | Descrição: {categoria.Descricao}");
+                    }
+                    break;
+
+               
+                case 8:
+                    Console.WriteLine("Criar categoria");
+
+                    Console.WriteLine("Digite o ID da categoria:");
+                    int idCategorias = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Digite o nome da categoria:");
+                    string nomeCategoria = Console.ReadLine();
+
+                    Console.WriteLine("Digite a descrição da categoria:");
+                    string descricaoCategoria = Console.ReadLine();
+
+                    Categoria novaCategoria = categoriaService.CriarCategoria(idCategorias, nomeCategoria, descricaoCategoria);
+
+                    Console.WriteLine($"Categoria '{novaCategoria.Nome}' criada com sucesso!");
+
+                    break;
+
+                case 9:
+                    Console.WriteLine("Editar categoria");
+                    Console.WriteLine("Digite o ID da categoria que você deseja editar:");
+                    int idEditarCategoria = int.Parse(Console.ReadLine());
+                    Categoria categoriaEditar = categoriaService.ObterCategoriaPorId(idEditarCategoria);
+
+                    if (categoriaEditar != null)
+                    {
+                        Console.WriteLine($"Categoria selecionada: {categoriaEditar.Nome}");
+
+                        Console.WriteLine("Digite o novo nome da categoria:");
+                        string novoNomeCategoria = Console.ReadLine();
+
+                        Console.WriteLine("Digite a nova descrição da categoria:");
+                        string novaDescricaoCategoria = Console.ReadLine();
+
+                        categoriaService.EditarCategoria(idEditarCategoria, novoNomeCategoria, novaDescricaoCategoria);
+
+                        Console.WriteLine($"Categoria ID {idEditarCategoria} editada com sucesso!");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Categoria ID {idEditarCategoria} não encontrada.");
+                    }
+                    break;
+
+                case 10:
+                    Console.WriteLine("Excluir categoria");
+                    Console.WriteLine("Digite o ID da categoria que você deseja excluir:");
+                    int idExcluirCategoria = int.Parse(Console.ReadLine());
+                    Categoria categoriaExcluir = categoriaService.ObterCategoriaPorId(idExcluirCategoria);
+
+                    if (categoriaExcluir != null)
+                    {
+                        categoriaService.ExcluirCategoria(idExcluirCategoria);
+
+                        Console.WriteLine($"Categoria ID {idExcluirCategoria} excluída com sucesso!");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Categoria ID {idExcluirCategoria} não encontrada.");
+                    }
+                    break;
+
+     
+                   
 
             }
 
